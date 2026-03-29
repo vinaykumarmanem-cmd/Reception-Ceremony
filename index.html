@@ -27,9 +27,9 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Card */
+        /* UPDATED CARD BACKGROUND */
         .card {
-            background: rgba(255, 255, 255, 0.95);
+            background: linear-gradient(135deg, #fff8e7, #fdecc8); /* 👈 changed here */
             padding: 40px;
             border-radius: 30px 0 30px 0;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -56,7 +56,6 @@
             font-weight: bold;
         }
 
-        /* Single Photo */
         .couple-photo {
             display: flex;
             justify-content: center;
@@ -137,10 +136,9 @@
     <!-- Hidden Details -->
     <div id="secret-details">
 
-        <!-- Single Couple Photo -->
         <div class="couple-photo">
            <img src="https://raw.githubusercontent.com/vinaykumarmanem-cmd/Reception-Ceremony/main/couple.jpg.jpeg" 
-     alt="Naga Raju & Sai Nirosha">
+           alt="Naga Raju & Sai Nirosha">
         </div>
 
         <div class="couple-names">
@@ -151,7 +149,7 @@
 
         <div class="venue-info">
             <strong>Venue:</strong><br>
-            At Our Residence, Grace appartments,Balavinayagar nagar road,Arumbakkam,Chennai<br>
+            At Our Residence, Grace appartments, Balavinayagar nagar road, Arumbakkam, Chennai<br>
             PIN: 600106
         </div>
 
@@ -167,6 +165,7 @@
     </div>
 
 </div>
+
 <audio id="bg-music" loop>
     <source src="song.mp3.mpeg" type="audio/mpeg">
 </audio>
@@ -175,10 +174,12 @@
 function openInvite() {
     document.getElementById('cover').style.display = 'none';
     document.getElementById('secret-details').style.display = 'block';
- document.getElementById('musicBtn').style.display = 'block';
-const music = document.getElementById('bg-music');
+    document.getElementById('musicBtn').style.display = 'block';
+
+    const music = document.getElementById('bg-music');
     music.play();
 }
+
 function toggleMusic() {
     const music = document.getElementById('bg-music');
 
@@ -188,7 +189,6 @@ function toggleMusic() {
         music.pause();
     }
 }
-
 </script>
 
 </body>
