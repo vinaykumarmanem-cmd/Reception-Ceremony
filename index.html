@@ -122,6 +122,9 @@
 <body>
 
 <div class="card">
+<button id="musicBtn" class="music-btn" onclick="toggleMusic()" style="display:none;">
+🔊
+</button>
 
     <!-- Cover -->
     <div id="cover">
@@ -164,12 +167,28 @@
     </div>
 
 </div>
+<audio id="bg-music" loop>
+    <source src="song.mp3.mpeg" type="audio/mpeg">
+</audio>
 
 <script>
 function openInvite() {
     document.getElementById('cover').style.display = 'none';
     document.getElementById('secret-details').style.display = 'block';
+ document.getElementById('musicBtn').style.display = 'block';
+const music = document.getElementById('bg-music');
+    music.play();
 }
+function toggleMusic() {
+    const music = document.getElementById('bg-music');
+
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+
 </script>
 
 </body>
